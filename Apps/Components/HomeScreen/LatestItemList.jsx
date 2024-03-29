@@ -4,7 +4,7 @@ import PostItem from "./PostItem";
 
 export default function LatestItemList({ latestItemList, heading }) {
   return (
-    <View className="mt-4">
+    <TouchableOpacity className="mt-4">
       <Text className="text-[20px] font-bold">{heading}</Text>
       <FlatList
         className="mt-3"
@@ -12,6 +12,6 @@ export default function LatestItemList({ latestItemList, heading }) {
         numColumns={2}
         renderItem={({ item, index }) => <PostItem item={item} />}
       />
-    </View>
+    </TouchableOpacity>
   );
 }
